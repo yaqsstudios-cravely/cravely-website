@@ -3,46 +3,199 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cravely</title>
-<meta name="description" content="Cravely: post the plate and your first-bite reaction, and see where your friends are actually eating.">
+<title>Cravely: show the plate, then your face</title>
+<meta name="description" content="Cravely is a food app for posting what you're eating with your first-bite reaction, finding where your friends really eat, and keeping your favourite spots secret.">
+<meta property="og:title" content="Cravely">
+<meta property="og:description" content="Show the plate. Then show your face. Coming to Android.">
+<meta name="theme-color" content="#F7F5FC">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
-<style>
-:root{--bg:#F7F5FC;--ink:#17141F;--muted:#5E5870;--card:#FFFFFF;--line:#E7E1F3;--purple:#7C3AED;--deep:#4C1D95}
-@media (prefers-color-scheme:dark){:root{--bg:#120A26;--ink:#F4F1FA;--muted:#C4B5FD;--card:#1E1440;--line:#2E2257;--purple:#A78BFA;--deep:#DDD6FE}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-main{max-width:720px;margin:0 auto;padding:56px 20px 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
-.icon{width:112px;height:112px;border-radius:26px;box-shadow:0 18px 40px rgba(124,58,237,.28)}
-h1{margin:6px 0 0;font-size:44px;letter-spacing:-.03em;color:var(--purple)}
-.lede{margin:0;font-size:19px;color:var(--muted);max-width:520px}
-.soon{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:12px 18px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--deep)}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%;margin-top:22px;text-align:left}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
-.card b{display:block;margin-bottom:4px}.card span{color:var(--muted);font-size:14px}
-footer{max-width:720px;margin:0 auto;padding:20px 20px 40px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;font-size:14px;color:var(--muted)}
-footer a{color:var(--purple)}
-@media (max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:36px}}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Geist:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<main>
-  <img class="icon" src="icon.svg" alt="Cravely app icon">
-  <h1><img src="wordmark.svg" alt="cravely" style="height:56px;display:block"></h1>
-  <p class="lede">Post the plate and your first-bite reaction. See where your friends are actually eating.</p>
-  <span class="soon">Coming soon to Google Play</span>
-  <div class="grid">
-    <div class="card"><b>Snap your plate</b><span>Food and your reaction in one shot.</span></div>
-    <div class="card"><b>Foodie map</b><span>Find the spots your friends love, near you.</span></div>
-    <div class="card"><b>Keep it secret</b><span>Lock your favourite places so only the curious can unlock them.</span></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Cravely home"><img class="mark" src="icon.svg" alt=""><img class="word" src="wordmark.svg" alt="cravely"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#map">The map</a>
+      <a href="#secret">Secret spots</a>
+      <a href="#chefs">Chef monsters</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="mailto:cravely.support@gmail.com?subject=I%20want%20to%20test%20Cravely&amp;body=Hi%2C%20I'd%20like%20to%20test%20Cravely%20on%20Android.%20My%20Google%20account%20email%20is%3A%20">Become a tester</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Show the plate.<br>Then show your face.</h1>
+        <p class="lede">Cravely is where you post what you're eating with your first-bite reaction, see where your friends really eat, and keep your favourite spots secret when you want to.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:cravely.support@gmail.com?subject=I%20want%20to%20test%20Cravely&amp;body=Hi%2C%20I'd%20like%20to%20test%20Cravely%20on%20Android.%20My%20Google%20account%20email%20is%3A%20">Become a tester</a>
+          <a class="btn btn-quiet" href="#how">See how it works</a>
+        </div>
+        <p class="hero-note">Coming to Android first. Free to download.</p>
+      </div>
+
+      <div class="post-stage" aria-label="An example Cravely post: a bowl of ramen, with the poster's first-bite reaction in the corner">
+        <figure class="post" style="margin:0">
+          <div class="post-photo">
+            <img src="plate.svg" alt="A bowl of ramen with chopsticks">
+            <div class="reaction"><img src="chef-noodle.svg" alt="Their first-bite reaction"></div>
+          </div>
+          <figcaption class="post-meta">
+            <img class="av" src="chef-maki.svg" alt="">
+            <div><b>Tonkotsu that hugs back</b><span>@maki at Noodle Hut</span></div>
+            <span class="stars" aria-label="Rated 5 out of 5">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 17l-5.2 2.7 1-5.9-4.3-4.1 5.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 17l-5.2 2.7 1-5.9-4.3-4.1 5.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 17l-5.2 2.7 1-5.9-4.3-4.1 5.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 17l-5.2 2.7 1-5.9-4.3-4.1 5.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 17l-5.2 2.7 1-5.9-4.3-4.1 5.9-.8z"/></svg>
+            </span>
+          </figcaption>
+        </figure>
+        <span class="chip place" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Soho, London</span>
+        <span class="chip reacts" aria-hidden="true"><img class="dot" src="chef-sprinkle.svg" alt=""><img class="dot" src="chef-taco.svg" alt=""><img class="dot" src="chef-bao.svg" alt="">Sprinkle and 4 others drooled</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Two photos, one honest review</h2>
+        <p>Anyone can make food look good. The face you pull on the first bite is what tells your friends whether it was worth it.</p>
+      </div>
+      <ol class="steps">
+        <li class="step"><div class="art" style="background:#E4DCFB"><img class="fill" src="plate.svg" alt=""></div><span class="num">1</span><h3>Snap the plate</h3><p>Take the food shot with the back camera, the way it arrived at the table.</p></li>
+        <li class="step"><div class="art" style="background:#DFF6EA"><img src="chef-noodle.svg" alt=""></div><span class="num">2</span><h3>Catch the first bite</h3><p>The front camera grabs your reaction in the same moment. No retakes.</p></li>
+        <li class="step"><div class="art" style="background:#FFE6F0"><img src="chef-bao.svg" alt=""></div><span class="num">3</span><h3>Rate it and post</h3><p>Add stars, a price, the place and a few hashtags, then share it with friends or everyone.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="map-sec" id="map">
+    <div class="wrap">
+      <div>
+        <h2>See where your friends actually eat</h2>
+        <p class="lede" style="margin-top:18px">Every post with a place lands on the foodie map, so the best spots near you come from people you know, not ads.</p>
+        <ul class="feature-list">
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span><div><b>Real places, real names</b><span>Search cafés, takeaways and tiny independents as you type.</span></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 3.5 3.5 10.6l6.8 2.6 2.6 6.8z"/></svg></span><div><b>Directions in one tap</b><span>Open any spot straight in Google Maps or Apple Maps.</span></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-3 3-5 7-5s7 2 7 5"/><circle cx="12" cy="8" r="3.5"/></svg></span><div><b>Friends first</b><span>Filter the map to people you follow when you want a trusted pick.</span></div></li>
+        </ul>
+      </div>
+      <div class="map-card" role="img" aria-label="A map of central London with friends' food spots pinned on it, one of them locked">
+        <svg class="map" viewBox="0 0 600 460" aria-hidden="true">
+          <rect width="600" height="460" fill="#EEEAF8"/>
+          <path d="M-20 330 C120 290 200 380 330 340 S520 300 620 350 L620 420 C520 380 420 420 330 410 S120 360 -20 400Z" fill="#D7E6FF"/>
+          <ellipse cx="470" cy="120" rx="90" ry="58" fill="#D8F0E2"/>
+          <ellipse cx="110" cy="150" rx="60" ry="40" fill="#D8F0E2"/>
+          <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
+            <path d="M-10 230 L610 190" stroke-width="22"/><path d="M180 -10 L250 470" stroke-width="18"/><path d="M400 -10 L360 470" stroke-width="14"/>
+            <path d="M-10 90 L610 60" stroke-width="10"/><path d="M60 470 L300 0" stroke-width="10"/><path d="M520 470 L600 250" stroke-width="10"/>
+          </g>
+          <g fill="none" stroke="#E2DBF2" stroke-width="5" stroke-linecap="round">
+            <path d="M0 290 L280 270"/><path d="M300 120 L600 110"/><path d="M110 0 L130 230"/><path d="M470 200 L500 460"/>
+          </g>
+        </svg>
+        <div class="pin" style="left:30%;top:44%"><img src="chef-maki.svg" alt=""><span class="tag">Noodle Hut</span></div>
+        <div class="pin" style="left:66%;top:30%"><img src="chef-sprinkle.svg" alt=""><span class="tag">Donut Lab</span></div>
+        <div class="pin" style="left:76%;top:70%"><img src="chef-pepperoni.svg" alt=""><span class="tag">Slice Club</span></div>
+        <div class="pin locked" style="left:44%;top:78%"><span class="lockdot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="10.5" width="13" height="9" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg></span><span class="tag">Secret spot</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vault" id="secret">
+    <div class="wrap">
+      <div>
+        <div class="section-head" style="margin-bottom:36px">
+          <h2>Some spots are too good to share</h2>
+          <p>Put a Lock on a post and the name, address and pin stay hidden. Friends who really want to know can spend a Key to reveal it.</p>
+        </div>
+        <ul class="vault-facts">
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="10.5" width="13" height="9" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg></span><div><b>Lock a spot</b><span>Your favourite hidden gem stays a secret.</span></div></li>
+          <li><span class="ic key"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15.5" r="3.6"/><path d="M10.6 13 19.5 4.1M15.6 8l2.6 2.6M13.4 10.2l2 2"/></svg></span><div><b>Unlock with a Key</b><span>Curious? Use a Key to see exactly where it is.</span></div></li>
+          <li><span class="ic key"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 18.5 9 14 21.5 6 10.5Z" fill="#FCD34D" stroke="#FFF3C4" stroke-width=".8"/></svg></span><div><b>Collect fragments</b><span>Every Key spent on your Lock earns you a fragment. Three forge a free Key.</span></div></li>
+        </ul>
+      </div>
+      <div class="forge" aria-label="Key forge: two of three fragments collected">
+        <div class="shards" aria-hidden="true">
+          <span class="shard on"><svg viewBox="0 0 24 24"><path d="M12 1.5 19.2 8.6 14.2 22.5 5 10.2Z" fill="#F4D06F" stroke="#FFF3C4" stroke-width=".8" stroke-linejoin="round"/><path d="M12 1.5 13.1 11.2 14.2 22.5M5 10.2l8.1 1 6.1-2.6" fill="none" stroke="rgba(120,72,10,.45)" stroke-width=".7"/></svg></span>
+          <span class="shard on"><svg viewBox="0 0 24 24"><path d="M12 1.5 19.2 8.6 14.2 22.5 5 10.2Z" fill="#F4D06F" stroke="#FFF3C4" stroke-width=".8" stroke-linejoin="round"/><path d="M12 1.5 13.1 11.2 14.2 22.5M5 10.2l8.1 1 6.1-2.6" fill="none" stroke="rgba(120,72,10,.45)" stroke-width=".7"/></svg></span>
+          <span class="shard"><svg viewBox="0 0 24 24" style="opacity:.25"><path d="M12 1.5 19.2 8.6 14.2 22.5 5 10.2Z" fill="#8B7FB0"/></svg></span>
+        </div>
+        <b>2 of 3 fragments</b>
+        <small>One more and you'll forge a free Key.</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="chefs">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Pick your chef</h2>
+        <p>No photo of yourself? Choose one of fourteen chef monsters for your profile, each with their favourite thing to eat.</p>
+      </div>
+      <ul class="cast">
+        <li><img src="chef-chompy.svg" alt=""><span>Chompy</span></li>
+        <li><img src="chef-noodle.svg" alt=""><span>Noodle</span></li>
+        <li><img src="chef-bao.svg" alt=""><span>Bao</span></li>
+        <li><img src="chef-sizzle.svg" alt=""><span>Sizzle</span></li>
+        <li><img src="chef-taco.svg" alt=""><span>Taco</span></li>
+        <li><img src="chef-sprinkle.svg" alt=""><span>Sprinkle</span></li>
+        <li><img src="chef-pepperoni.svg" alt=""><span>Pepperoni</span></li>
+        <li><img src="chef-boba.svg" alt=""><span>Boba</span></li>
+        <li><img src="chef-maki.svg" alt=""><span>Maki</span></li>
+        <li><img src="chef-butters.svg" alt=""><span>Butters</span></li>
+        <li><img src="chef-gulp.svg" alt=""><span>Gulp</span></li>
+        <li><img src="chef-blaze.svg" alt=""><span>Blaze</span></li>
+        <li><img src="chef-scoop.svg" alt=""><span>Scoop</span></li>
+        <li><img src="chef-whisky.svg" alt=""><span>Whiskers</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="join">
+    <div class="wrap">
+      <div class="join-card">
+        <div>
+          <h2>Be one of the first to try it</h2>
+          <p>Cravely is in testing on Android. Email us the address of your Google account and we'll send you an invite to install it from Google Play.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:cravely.support@gmail.com?subject=I%20want%20to%20test%20Cravely&amp;body=Hi%2C%20I'd%20like%20to%20test%20Cravely%20on%20Android.%20My%20Google%20account%20email%20is%3A%20">Become a tester</a>
+          </div>
+        </div>
+        <div class="join-crowd" aria-hidden="true">
+          <img src="chef-sizzle.svg" alt="" style="left:0;top:40px;transform:rotate(-8deg)">
+          <img src="chef-chompy.svg" alt="" style="left:30%;top:0;z-index:1">
+          <img src="chef-scoop.svg" alt="" style="right:0;top:56px;transform:rotate(7deg)">
+        </div>
+      </div>
+    </div>
   </div>
 </main>
-<footer>
-  <a href="/privacy">Privacy Policy</a>
-  <a href="/terms">Terms of Service</a>
-  <a href="/guidelines">Community Guidelines</a>
-  <a href="/delete-account">Delete your account</a>
-  <a href="mailto:cravely.support@gmail.com">Contact</a>
-  <span>© 2026 Yaqs Studios</span>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Cravely home" style="margin-right:0"><img class="word" src="wordmark.svg" alt="cravely"></a>
+    <span>Made by Yaqs Studios in the UK</span>
+    <nav aria-label="Legal and contact">
+      <a href="privacy">Privacy Policy</a>
+      <a href="terms">Terms of Service</a>
+      <a href="guidelines">Community Guidelines</a>
+      <a href="delete-account">Delete your account</a>
+      <a href="mailto:cravely.support@gmail.com">Contact us</a>
+    </nav>
+  </div>
 </footer>
+<script>
+  // a hairline under the header once the page scrolls
+  (function () { var n = document.getElementById('nav'); var f = function () { n.classList.toggle('scrolled', window.scrollY > 8); }; f(); addEventListener('scroll', f, { passive: true }); })();
+</script>
 </body>
 </html>
