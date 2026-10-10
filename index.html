@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cravely</title>
+<meta name="description" content="Cravely: post the plate and your first-bite reaction, and see where your friends are actually eating.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#F7F5FC;--ink:#17141F;--muted:#5E5870;--card:#FFFFFF;--line:#E7E1F3;--purple:#7C3AED;--deep:#4C1D95}
+@media (prefers-color-scheme:dark){:root{--bg:#120A26;--ink:#F4F1FA;--muted:#C4B5FD;--card:#1E1440;--line:#2E2257;--purple:#A78BFA;--deep:#DDD6FE}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+main{max-width:720px;margin:0 auto;padding:56px 20px 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
+.icon{width:112px;height:112px;border-radius:26px;box-shadow:0 18px 40px rgba(124,58,237,.28)}
+h1{margin:6px 0 0;font-size:44px;letter-spacing:-.03em;color:var(--purple)}
+.lede{margin:0;font-size:19px;color:var(--muted);max-width:520px}
+.soon{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:12px 18px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--deep)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%;margin-top:22px;text-align:left}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+.card b{display:block;margin-bottom:4px}.card span{color:var(--muted);font-size:14px}
+footer{max-width:720px;margin:0 auto;padding:20px 20px 40px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;font-size:14px;color:var(--muted)}
+footer a{color:var(--purple)}
+@media (max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:36px}}
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="icon.svg" alt="Cravely app icon">
+  <h1><img src="wordmark.svg" alt="cravely" style="height:56px;display:block"></h1>
+  <p class="lede">Post the plate and your first-bite reaction. See where your friends are actually eating.</p>
+  <span class="soon">Coming soon to Google Play</span>
+  <div class="grid">
+    <div class="card"><b>Snap your plate</b><span>Food and your reaction in one shot.</span></div>
+    <div class="card"><b>Foodie map</b><span>Find the spots your friends love, near you.</span></div>
+    <div class="card"><b>Keep it secret</b><span>Lock your favourite places so only the curious can unlock them.</span></div>
+  </div>
+</main>
+<footer>
+  <a href="/privacy">Privacy Policy</a>
+  <a href="/terms">Terms of Service</a>
+  <a href="/guidelines">Community Guidelines</a>
+  <a href="/delete-account">Delete your account</a>
+  <a href="mailto:cravely.support@gmail.com">Contact</a>
+  <span>© 2026 Yaqs Studios</span>
+</footer>
+</body>
+</html>
