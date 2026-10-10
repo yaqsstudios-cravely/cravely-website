@@ -312,3 +312,8 @@ section[id]{scroll-margin-top:68px}
   .step:hover,.post:hover .reaction,.join-card:hover .join-crowd img{transform:none}
   .step:hover .art img,.post:hover .post-photo>img{transform:none}
 }
+
+/* how it works: purpose-drawn scenes fill the card's picture area */
+.step .art{background:none;aspect-ratio:640/300;height:auto}
+.step .art img.full{width:100%;height:100%;object-fit:cover}
+.step:hover .art img.full{transform:scale(1.04)}
