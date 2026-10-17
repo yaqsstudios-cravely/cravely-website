@@ -317,3 +317,45 @@ section[id]{scroll-margin-top:68px}
 .step .art{background:none;aspect-ratio:640/300;height:auto}
 .step .art img.full{width:100%;height:100%;object-fit:cover}
 .step:hover .art img.full{transform:scale(1.04)}
+
+/* ---------- the new chef monsters ---------- */
+.chef-show{scroll-margin-top:96px;--c:#6B3FD6;--bg:#ECE6FC;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center;background:var(--white);border-radius:var(--r-lg);padding:36px 40px;box-shadow:0 1px 0 var(--line),0 30px 60px -40px rgba(76,29,149,.35);margin-bottom:28px}
+.chef-main{position:relative;display:grid;place-items:center}
+.chef-main::before{content:"";position:absolute;inset:8% 4% 0;border-radius:50%;background:var(--bg);filter:blur(30px);opacity:.9;transition:background .4s}
+.chef-main img{position:relative;width:100%;max-width:360px;height:auto;filter:drop-shadow(0 18px 24px rgba(30,11,61,.18))}
+.chef-about h3{font-size:clamp(32px,4vw,44px);color:var(--c);transition:color .3s}
+.chef-about>p{margin:8px 0 0;color:var(--ink-2);font-size:19px}
+.moods{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 12px}
+.moods figure{margin:0;text-align:center}
+.moods img{width:100%;height:auto;transition:transform .3s var(--ease-spring,ease)}
+.moods li:hover img{transform:translateY(-4px) rotate(-3deg)}
+.moods figcaption{margin-top:4px;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.moods[hidden],.moods-soon[hidden]{display:none}
+.moods-soon{margin:22px 0 0;display:inline-block;padding:8px 14px;border-radius:999px;background:var(--bg);color:var(--c);font-weight:600;font-size:15px}
+.chef-show.swap .chef-main img{animation:chefin .5s cubic-bezier(.3,1.5,.5,1)}
+.chef-show.swap .moods li{animation:moodin .45s cubic-bezier(.2,.8,.2,1) both}
+.chef-show.swap .moods li:nth-child(2){animation-delay:.04s}.chef-show.swap .moods li:nth-child(3){animation-delay:.08s}.chef-show.swap .moods li:nth-child(4){animation-delay:.12s}.chef-show.swap .moods li:nth-child(5){animation-delay:.16s}.chef-show.swap .moods li:nth-child(6){animation-delay:.2s}.chef-show.swap .moods li:nth-child(7){animation-delay:.24s}
+@keyframes chefin{from{transform:translateY(14px) scale(.92);opacity:0}to{transform:none;opacity:1}}
+@keyframes moodin{from{transform:translateY(10px);opacity:0}to{transform:none;opacity:1}}
+.pick-hint{margin:0 0 14px;color:var(--ink-2);font-size:15px;text-align:center}
+.cast li{text-align:center}
+.chef-pick{appearance:none;border:0;background:none;padding:6px 4px 8px;width:100%;border-radius:20px;cursor:pointer;font:inherit;color:inherit;transition:background .2s}
+.chef-pick img{width:100%;height:auto;aspect-ratio:auto;border-radius:0;display:block;transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.chef-pick:hover img{transform:translateY(-6px) rotate(-4deg)}
+.chef-pick[aria-pressed="true"]{background:var(--bg)}
+.chef-pick[aria-pressed="true"] span{color:var(--ink)}
+.chef-pick:focus-visible{outline:3px solid var(--grape);outline-offset:2px}
+.cast .chef-pick span{display:block;margin-top:6px;font-size:14px;font-weight:600;color:var(--ink-2)}
+/* steps, hero, map, vault and join use the new chefs too */
+.step .art.mood{position:relative;background:var(--bg);aspect-ratio:640/300;height:auto}
+.step .art.mood img{position:absolute;left:50%;bottom:0;height:94%;width:auto;max-width:none;transform:translateX(-50%);transform-origin:50% 100%}
+.step:hover .art.mood img{transform:translateX(-50%) scale(1.06) rotate(-2deg)}
+.reaction img{object-fit:cover;object-position:50% 40%;transform:scale(1.08)}
+.post-meta .av,.chip.reacts .dot{object-fit:cover;object-position:50% 70%;background:var(--lavender)}
+.pin img{object-fit:cover;object-position:50% 72%;background:var(--white)}
+.forge{position:relative}
+.forge-chef{position:absolute;width:118px;height:auto;left:-34px;top:-62px;transform:rotate(-8deg);filter:drop-shadow(0 12px 18px rgba(0,0,0,.35))}
+.join-crowd img{width:150px;height:auto;border:0;border-radius:0;box-shadow:none;filter:drop-shadow(0 14px 20px rgba(18,10,38,.45))}
+@media (max-width:980px){.chef-show{grid-template-columns:1fr;gap:18px;padding:28px 22px}.chef-main img{max-width:280px}.chef-about{text-align:center}.moods{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:720px){.moods{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px}.forge-chef{width:90px;left:-14px;top:-50px}.join-crowd img{width:116px}}
+@media (prefers-reduced-motion:reduce){.chef-show.swap .chef-main img,.chef-show.swap .moods li{animation:none}}
