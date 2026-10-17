@@ -7,7 +7,7 @@
 <meta name="description" content="Someone invited you to Cravely, the social food app. Follow what they eat, find hidden spots and share your own plates.">
 <meta property="og:title" content="Come eat with me on Cravely">
 <meta property="og:description" content="Follow what I eat, find hidden food spots and share your own plates.">
-<meta property="og:image" content="https://getcravely.co.uk/step-post.svg">
+<meta property="og:image" content="https://getcravely.co.uk/ramen-og.png">
 <link rel="icon" href="../icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +17,8 @@
   .invite{min-height:calc(100vh - 80px);display:grid;place-items:center;padding:110px 16px 48px}
   .inv-card{width:min(440px,100%);background:#fff;border-radius:32px;box-shadow:0 40px 90px -30px rgba(76,29,149,.45),0 0 0 1px rgba(124,58,237,.08);overflow:hidden;text-align:center}
   .inv-art{position:relative;height:210px;background:radial-gradient(120% 90% at 50% 30%,#EDE7FF,#DCD1FB)}
-  .inv-art .chef{position:absolute;left:50%;bottom:6px;width:120px;margin-left:-60px;filter:drop-shadow(0 14px 18px rgba(76,29,149,.25));animation:bob 3s ease-in-out infinite}
-  .inv-art .p{position:absolute;width:62px;height:62px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 10px 24px -8px rgba(76,29,149,.5)}
+  .inv-art .chef{position:absolute;left:50%;bottom:10px;width:170px;margin-left:-85px;filter:drop-shadow(0 14px 18px rgba(76,29,149,.25));animation:bob 3s ease-in-out infinite}
+  .inv-art .p{position:absolute;width:66px;height:66px;border-radius:50%;object-fit:cover;background:#F3EEFF;border:4px solid #fff;box-shadow:0 10px 24px -8px rgba(76,29,149,.5)}
   .inv-art .p1{left:12%;top:26%;animation:bob 3.4s ease-in-out infinite}.inv-art .p2{right:12%;top:18%;animation:bob 3.8s ease-in-out -1s infinite}
   @keyframes bob{50%{transform:translateY(-7px)}}
   .inv-body{padding:26px 26px 30px}
@@ -43,8 +43,8 @@
 <main class="invite">
   <div class="inv-card">
     <div class="inv-art" aria-hidden="true">
-      <img class="p p1" src="../step-snap.svg" alt=""><img class="p p2" src="../step-post.svg" alt="">
-      <img class="chef" id="chef" src="../buddies/chompy.svg" alt="">
+      <img class="p p1" src="../ramen.webp" alt=""><img class="p p2" src="../chefs/moods/taco-cool.webp" alt="">
+      <img class="chef" id="chef" src="../chefs/chompy.webp" alt="">
     </div>
     <div class="inv-body">
       <h1 id="title">You're invited to Cravely</h1>
@@ -65,7 +65,7 @@
   var chefs = ['bao','blaze','boba','butters','chompy','gulp','maki','noodle','pepperoni','scoop','sizzle','sprinkle','taco','whisky'];
   var q = new URLSearchParams(location.search), h = (q.get('h') || '').toLowerCase().replace(/[^a-z0-9._]/g, '').slice(0, 20);
   var sum = 0; for (var i = 0; i < h.length; i++) sum += h.charCodeAt(i);
-  document.getElementById('chef').src = '../buddies/' + chefs[h ? sum % chefs.length : 4] + '.svg';
+  document.getElementById('chef').src = '../chefs/' + chefs[h ? sum % chefs.length : 4] + '.webp';
   if (!h) return;
   document.title = '@' + h + ' is on Cravely';
   document.getElementById('title').textContent = 'Come eat with me';
