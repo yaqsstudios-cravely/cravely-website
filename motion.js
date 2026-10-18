@@ -98,3 +98,18 @@
     update();
   }
 })();
+
+/* ---- the example post: tap the small photo to swap it with the big one ---- */
+(function () {
+  var box = document.querySelector('.post-photo'); if (!box) return;
+  function swap() {
+    var big = box.querySelector('.ph-l.big'), small = box.querySelector('.ph-l.small'); if (!big || !small) return;
+    // the photo that's shrinking stays on top while it travels to the corner
+    big.classList.add('lift'); setTimeout(function () { big.classList.remove('lift'); }, 600);
+    big.classList.remove('big'); big.classList.add('small'); small.classList.remove('small'); small.classList.add('big');
+    big.setAttribute('role', 'button'); big.setAttribute('tabindex', '0'); big.setAttribute('aria-label', 'Swap the two photos');
+    small.removeAttribute('role'); small.removeAttribute('tabindex'); small.removeAttribute('aria-label');
+  }
+  box.addEventListener('click', function (e) { if (e.target.closest('.ph-l.small')) swap(); });
+  box.addEventListener('keydown', function (e) { if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.ph-l.small')) { e.preventDefault(); swap(); var n = box.querySelector('.ph-l.small'); if (n) n.focus(); } });
+})();
