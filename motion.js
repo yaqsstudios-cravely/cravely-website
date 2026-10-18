@@ -9,7 +9,7 @@
   var nav = document.getElementById('nav');
 
   /* ---- header: hairline and compact height once you scroll ---- */
-  function onScrollNav() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 8 || nav.dataset.always === '1'); }
+  function onScrollNav() { if (!nav) return; var y = window.scrollY, on = nav.classList.contains('scrolled'); nav.classList.toggle('scrolled', nav.dataset.always === '1' || (on ? y > 2 : y > 16)); }
   if (nav && nav.classList.contains('scrolled')) nav.dataset.always = '1';
   onScrollNav();
   addEventListener('scroll', onScrollNav, { passive: true });
