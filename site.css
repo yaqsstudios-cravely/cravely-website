@@ -89,6 +89,8 @@ section{padding:112px 0}
 .ph-l.small:hover{box-shadow:0 0 0 3px rgba(124,58,237,.35),0 10px 24px -8px rgba(30,11,61,.45)}
 .ph-l.small:focus-visible{outline:3px solid var(--grape);outline-offset:2px}
 .ph-l.lift{z-index:3}
+.ph-back{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:1;transform:none;transition:opacity .5s ease .12s,transform .6s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.ph-back.go{opacity:0;transform:scale(1.04)}
 .post-meta{display:flex;align-items:center;gap:12px;padding:16px 6px 6px}
 .post-meta .av{width:44px;height:44px;border-radius:50%;flex:none;overflow:hidden;background:var(--tint,#EDE9FE)}
 .post-meta .av img{width:100%;height:100%;object-fit:cover}
@@ -339,10 +341,10 @@ section[id]{scroll-margin-top:68px}
 /* ===================== Oct 2026: side decorations, tester sign-up, extra motion ===================== */
 /* soft colour and a few drifting food doodles in the empty space either side of the page (wide screens only) */
 body{position:relative;overflow-x:clip}
-.side-deco{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden;display:none}
+.side-deco{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden;display:none}
 main,.foot{position:relative;z-index:1}
-@media (min-width:1240px){.side-deco{display:block}}
-.side-deco .blob{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(70px);opacity:.5}
+@media (min-width:1200px){.side-deco{display:block}}
+.side-deco .blob{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(70px);opacity:.45;z-index:-1}
 .side-deco .b1{left:-260px;top:12%;background:#DCCBFF}
 .side-deco .b2{right:-260px;top:38%;background:#FFD9E8}
 .side-deco .b3{left:-240px;top:70%;background:#CFF0E2}
@@ -371,10 +373,6 @@ main,.foot{position:relative;z-index:1}
 .chip.reacts{animation:pop .5s cubic-bezier(.3,1.5,.5,1) 1s both,bob 5.6s ease-in-out 1.8s infinite}
 @keyframes bob{50%{transform:translateY(-6px)}}
 
-/* chef cards: a happy hop on hover */
-.cast .stage img{transition:transform .5s var(--ease-spring)}
-.cast li:hover .stage img{transform:translateY(-8px) rotate(-3deg) scale(1.04)}
-.cast li:nth-child(even):hover .stage img{transform:translateY(-8px) rotate(3deg) scale(1.04)}
 
 /* the tester panel: the three chefs rise up into view, then bob along */
 .motion .join-card .join-crowd{opacity:0;transform:translateY(70px)}
@@ -443,3 +441,24 @@ main,.foot{position:relative;z-index:1}
 @keyframes confetti{0%{opacity:1;transform:translate(-50%,0) rotate(0)}100%{opacity:0;transform:translate(calc(-50% + var(--x)),var(--y)) rotate(var(--r))}}
 @media (max-width:520px){.t-card{padding:22px 18px;border-radius:24px}.t-head h2{font-size:23px}.t-head img{width:50px;height:50px}}
 @media (prefers-reduced-motion:reduce){.side-deco .dd{animation:none}}
+
+/* more side doodles, spread down the whole page */
+.side-deco .dd{opacity:.6}
+.side-deco .d11{left:calc(50% - 650px);top:15%;stroke:#8FD3B6;animation-delay:-1s}
+.side-deco .d12{right:calc(50% - 660px);top:7%;stroke:#F4A3C0;rotate:12deg;animation-delay:-4.5s}
+.side-deco .d13{left:calc(50% - 690px);top:36%;stroke:#F2B45A;animation-delay:-6.5s}
+.side-deco .d14{right:calc(50% - 700px);top:50%;rotate:-14deg;animation-delay:-2.2s}
+.side-deco .d15{left:calc(50% - 645px);top:57%;stroke:#8FB8F2;animation-delay:-5.4s}
+.side-deco .d16{right:calc(50% - 645px);top:68%;stroke:#8FD3B6;animation-delay:-3.3s}
+.side-deco .d17{left:calc(50% - 680px);top:76%;stroke:#F4A3C0;rotate:-8deg;animation-delay:-7.5s}
+.side-deco .d18{right:calc(50% - 690px);top:89%;stroke:#F2B45A;animation-delay:-1.8s}
+.side-deco .d19,.side-deco .d20,.side-deco .d21,.side-deco .d22{stroke:#F2C14E;width:24px;height:24px;opacity:.7;animation:twinkle 3.2s ease-in-out infinite}
+.side-deco .d19{right:calc(50% - 630px);top:13%;animation-delay:-.8s}
+.side-deco .d20{left:calc(50% - 625px);top:42%;stroke:#C4B5FD;animation-delay:-2s}
+.side-deco .d21{right:calc(50% - 635px);top:63%;animation-delay:-1.2s}
+.side-deco .d22{left:calc(50% - 630px);top:93%;stroke:#C4B5FD;animation-delay:-2.6s}
+.side-deco .dots{position:absolute;width:70px;height:70px;background:radial-gradient(circle,#CDBEF7 2px,transparent 2.5px) 0 0/14px 14px;opacity:.55}
+.side-deco .dots.o1{left:calc(50% - 720px);top:22%}
+.side-deco .dots.o2{right:calc(50% - 720px);top:46%}
+.side-deco .dots.o3{left:calc(50% - 715px);top:82%}
+.side-deco .b4{right:-260px;top:84%;background:#FFE7B8}

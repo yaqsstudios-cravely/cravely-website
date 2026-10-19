@@ -104,6 +104,13 @@
   var box = document.querySelector('.post-photo'); if (!box) return;
   function swap() {
     var big = box.querySelector('.ph-l.big'), small = box.querySelector('.ph-l.small'); if (!big || !small) return;
+    // the old big photo stays underneath as a backdrop while the new one grows over it, so there's never an empty gap
+    var old = box.querySelector('.ph-back'); if (old) old.remove();
+    var back = document.createElement('img'); back.className = 'ph-back'; back.alt = ''; back.setAttribute('aria-hidden', 'true');
+    back.src = big.querySelector('img').currentSrc || big.querySelector('img').src;
+    box.insertBefore(back, box.firstChild);
+    requestAnimationFrame(function () { requestAnimationFrame(function () { back.classList.add('go'); }); });
+    setTimeout(function () { if (back.parentNode) back.remove(); }, 700);
     // the photo that's shrinking stays on top while it travels to the corner
     big.classList.add('lift'); setTimeout(function () { big.classList.remove('lift'); }, 600);
     big.classList.remove('big'); big.classList.add('small'); small.classList.remove('small'); small.classList.add('big');
