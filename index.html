@@ -13,10 +13,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Geist:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="site.css?v=7">
+<link rel="stylesheet" href="site.css?v=8">
 </head>
-<body>
+<body data-api="https://cravely-api.onrender.com">
 <a class="skip" href="#main">Skip to content</a>
+<div class="side-deco" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <svg class="dd d1" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="6.5"/><path d="M14 17l2 1.5M31 13l-1 2.2M35 26l-2.2.6M19 34l1.2-2M28 33l-.4-2.3"/></svg>
+  <svg class="dd d2" viewBox="0 0 48 48"><path d="M7 33a17 17 0 0 1 34 0z"/><path d="M12 27c3-3 5 0 8-3s5 0 8-3 5 0 8-2"/></svg>
+  <svg class="dd d3" viewBox="0 0 48 48"><path d="M24 6l3.6 11.4L39 21l-11.4 3.6L24 36l-3.6-11.4L9 21l11.4-3.6z"/></svg>
+  <svg class="dd d4" viewBox="0 0 48 48"><path d="M8 22h32a16 16 0 0 1-32 0z"/><path d="M17 15c0-3 2-3 2-6M24 15c0-3 2-3 2-6M31 15c0-3 2-3 2-6M14 38h20"/></svg>
+  <svg class="dd d5" viewBox="0 0 48 48"><path d="M10 10l28 8-20 22z"/><circle cx="21" cy="19" r="2.2"/><circle cx="27" cy="25" r="2"/><circle cx="20" cy="29" r="1.8"/></svg>
+  <svg class="dd d6" viewBox="0 0 48 48"><path d="M24 39s-13-8-13-18a7 7 0 0 1 13-3.6A7 7 0 0 1 37 21c0 10-13 18-13 18z"/></svg>
+  <svg class="dd d7" viewBox="0 0 48 48"><path d="M30 8c-1 4 2 6 2 6M26 14c8-1 12 6 8 16S18 44 12 40s4-8 6-14 2-11 8-12z"/></svg>
+  <svg class="dd d8" viewBox="0 0 48 48"><path d="M24 10l2.2 7 7.3.1-5.9 4.3 2.2 7L24 24.2l-5.8 4.2 2.2-7-5.9-4.3 7.3-.1z"/></svg>
+  <svg class="dd d9" viewBox="0 0 48 48"><path d="M14 20h20l-3 20H17z"/><path d="M12 20h24M22 20l4-12h5"/><circle cx="20" cy="31" r="1.6"/><circle cx="27" cy="34" r="1.6"/><circle cx="24" cy="27" r="1.6"/></svg>
+  <svg class="dd d10" viewBox="0 0 48 48"><path d="M24 6l3.6 11.4L39 21l-11.4 3.6L24 36l-3.6-11.4L9 21l11.4-3.6z"/></svg>
+</div>
 
 <header class="nav" id="nav">
   <div class="wrap">
@@ -27,7 +40,7 @@
       <a href="#secret">Secret spots</a>
       <a href="#chefs">Chef monsters</a>
     </nav>
-    <a class="btn btn-primary btn-sm" href="mailto:cravely.support@gmail.com?subject=I%20want%20to%20test%20Cravely&amp;body=Hi%2C%20I'd%20like%20to%20test%20Cravely%20on%20Android.%20My%20Google%20account%20email%20is%3A%20">Become a tester</a>
+    <a class="btn btn-primary btn-sm" href="#join" data-tester>Become a tester</a>
   </div>
 </header>
 
@@ -38,7 +51,7 @@
         <h1 class="hero-title"><span class="line"><span>Show the plate.</span></span><span class="line"><span>Then show your face.</span></span></h1>
         <p class="lede hero-in" style="--d:.35s">Cravely is where you post what you're eating with your first-bite reaction, see where your friends really eat, and keep your favourite spots secret when you want to.</p>
         <div class="cta-row hero-in" style="--d:.48s">
-          <a class="btn btn-primary" href="mailto:cravely.support@gmail.com?subject=I%20want%20to%20test%20Cravely&amp;body=Hi%2C%20I'd%20like%20to%20test%20Cravely%20on%20Android.%20My%20Google%20account%20email%20is%3A%20">Become a tester</a>
+          <a class="btn btn-primary" href="#join" data-tester>Become a tester</a>
           <a class="btn btn-quiet" href="#how">See how it works</a>
         </div>
         <p class="hero-note hero-in" style="--d:.6s">Coming to Android first. Free to download.</p>
@@ -167,17 +180,17 @@
     </div>
   </section>
 
-  <div class="join">
+  <div class="join" id="join">
     <div class="wrap">
       <div class="join-card" data-reveal>
         <div>
           <h2>Be one of the first to try it</h2>
-          <p>Cravely is in testing on Android. Email us the address of your Google account and we'll send you an invite to install it from Google Play.</p>
+          <p>Cravely is in testing on Android. Leave your details and we'll send you an invite to install it from Google Play.</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="mailto:cravely.support@gmail.com?subject=I%20want%20to%20test%20Cravely&amp;body=Hi%2C%20I'd%20like%20to%20test%20Cravely%20on%20Android.%20My%20Google%20account%20email%20is%3A%20">Become a tester</a>
+            <a class="btn btn-primary" href="#join" data-tester>Become a tester</a>
           </div>
         </div>
-        <img class="join-crowd" src="art/trio.webp" width="1000" height="580" alt="" aria-hidden="true" loading="lazy">
+        <img class="join-crowd" src="art/trio.webp?v=2" width="1000" height="580" alt="" aria-hidden="true" loading="lazy">
       </div>
     </div>
   </div>
@@ -196,6 +209,36 @@
     </nav>
   </div>
 </footer>
-<script src="motion.js?v=6" defer></script>
+
+<dialog class="tester" id="tester" aria-labelledby="tester-h">
+  <div class="t-card">
+    <button type="button" class="t-x" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="t-pane" data-pane="form">
+      <div class="t-head"><img src="art/heads/chompy.webp" alt="" width="64" height="64"><div><h2 id="tester-h">Become a tester</h2><p>Try Cravely before anyone else. It takes 30 seconds.</p></div></div>
+      <form id="tester-form" novalidate>
+        <label class="t-field"><span>Your name</span><input name="name" autocomplete="given-name" maxlength="60" required></label>
+        <label class="t-field"><span>Google account email</span><input name="email" type="email" autocomplete="email" inputmode="email" maxlength="120" placeholder="you@gmail.com" required><small>The Google account signed in on your phone's Play Store. We'll send the invite here.</small></label>
+        <fieldset class="t-field"><legend>Your phone</legend><div class="t-seg">
+          <label><input type="radio" name="device" value="android" checked><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.2 9.5h9.6a1 1 0 0 1 1 1v6.3a1.6 1.6 0 0 1-1.6 1.6H15v2.3a1.2 1.2 0 1 1-2.4 0v-2.3h-1.2v2.3a1.2 1.2 0 1 1-2.4 0v-2.3H7.8a1.6 1.6 0 0 1-1.6-1.6v-6.3a1 1 0 0 1 1-1zM8.1 4.3l-.8-1.3a.3.3 0 1 1 .5-.3l.8 1.3A6.6 6.6 0 0 1 12 3.3a6.6 6.6 0 0 1 3.4.7l.8-1.3a.3.3 0 1 1 .5.3l-.8 1.3A5 5 0 0 1 18 8.6H6a5 5 0 0 1 2.1-4.3zM9.6 6.3a.7.7 0 1 0 0 1.4.7.7 0 0 0 0-1.4zm4.8 0a.7.7 0 1 0 0 1.4.7.7 0 0 0 0-1.4z"/></svg>Android</span></label>
+          <label><input type="radio" name="device" value="iphone"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.6 2.1-3.7a4.5 4.5 0 0 0-3.6-2c-1.5-.2-3 .9-3.7.9-.8 0-2-.9-3.2-.8A4.8 4.8 0 0 0 4 9.4c-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.1-1.2 2.9-2.4a10 10 0 0 0 1.3-2.7 4.2 4.2 0 0 1-2.3-3.9zM14 5.1a4.2 4.2 0 0 0 1-3.1 4.4 4.4 0 0 0-2.9 1.5 4.1 4.1 0 0 0-1 3 3.7 3.7 0 0 0 2.9-1.4z"/></svg>iPhone</span></label>
+        </div><small class="t-ios" hidden>Testing is Android only for now. We'll save your place and email you when Cravely comes to iPhone.</small></fieldset>
+        <label class="t-field"><span>Where did you hear about us? <em>(optional)</em></span><select name="heard"><option value="">Choose one</option><option value="tiktok">TikTok</option><option value="instagram">Instagram</option><option value="friend">A friend</option><option value="search">Google search</option><option value="other">Somewhere else</option></select></label>
+        <label class="t-field"><span>Anything you'd like to say? <em>(optional)</em></span><textarea name="note" rows="2" maxlength="400" placeholder="Your favourite food spot, what you'd love Cravely to do..."></textarea></label>
+        <label class="t-hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+        <label class="t-check"><input type="checkbox" name="age13" required><span>I'm 13 or older and happy for Cravely to email me about testing. See our <a href="privacy" target="_blank">Privacy Policy</a>.</span></label>
+        <p class="t-err" role="alert" hidden></p>
+        <button class="btn btn-primary t-send" type="submit"><span>Send my details</span></button>
+      </form>
+    </div>
+    <div class="t-pane t-done" data-pane="done" hidden>
+      <div class="t-burst" aria-hidden="true"></div>
+      <img class="t-trio" src="art/trio.webp?v=2" alt="" width="1000" height="580">
+      <h2 tabindex="-1">You're on the list!</h2>
+      <p class="t-done-msg">We'll email you the invite link soon. Keep an eye on your inbox.</p>
+      <button type="button" class="btn btn-quiet" data-close>Done</button>
+    </div>
+  </div>
+</dialog>
+<script src="motion.js?v=7" defer></script>
 </body>
 </html>
