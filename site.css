@@ -462,3 +462,7 @@ main,.foot{position:relative;z-index:1}
 .side-deco .dots.o2{right:calc(50% - 720px);top:46%}
 .side-deco .dots.o3{left:calc(50% - 715px);top:82%}
 .side-deco .b4{right:-260px;top:84%;background:#FFE7B8}
+
+/* tester pop-up: the Cravely logo in purple, no background */
+.t-head img.t-logo{width:52px;height:auto;border-radius:0;background:none;flex:none;filter:drop-shadow(0 6px 12px rgba(124,58,237,.25))}
+@media (max-width:520px){.t-head img.t-logo{width:44px;height:auto}}
