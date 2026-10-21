@@ -49,13 +49,13 @@
     <div class="inv-body">
       <h1 id="title">You're invited to Cravely</h1>
       <div class="inv-handle" id="handle" hidden></div>
-      <p id="lead">Cravely is where friends share what they're eating, find hidden food spots on the map, and earn Craves for every plate.</p>
+      <p id="lead">Share what you eat, and see where your friends are eating.</p>
       <div class="inv-btns">
-        <a class="btn btn-primary" id="get" href="mailto:cravely.support@gmail.com?subject=I%20want%20to%20test%20Cravely&amp;body=Hi%2C%20I&#39;d%20like%20to%20test%20Cravely%20on%20Android.%20My%20Google%20account%20email%20is%3A%20">Get Cravely for Android</a>
+        <a class="btn btn-primary" id="get" href="/#tester">Get Cravely for Android</a>
         <button class="btn btn-ghost" id="copy" type="button" hidden>Copy username</button>
       </div>
       <div class="inv-steps" id="steps" hidden>
-        <b>Already have Cravely?</b> Open it, tap <b>Search</b> and type <b id="h2"></b>, then tap <b>Follow</b>. When they follow you back you're friends.
+        <b>Already have Cravely?</b> Search for <b id="h2"></b> and tap Follow.
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@
   document.title = '@' + h + ' is on Cravely';
   document.getElementById('title').textContent = 'Come eat with me';
   var hd = document.getElementById('handle'); hd.textContent = '@' + h; hd.hidden = false;
-  document.getElementById('lead').textContent = 'Follow @' + h + ' on Cravely to see what they\'re eating, find their favourite spots on the map, and share your own plates.';
+  document.getElementById('lead').textContent = 'Follow @' + h + ' to see what they\'re eating.';
   document.getElementById('h2').textContent = '@' + h; document.getElementById('steps').hidden = false;
   var c = document.getElementById('copy'); c.hidden = false;
   c.addEventListener('click', function () { (navigator.clipboard ? navigator.clipboard.writeText('@' + h) : Promise.reject()).then(function () { c.textContent = 'Copied @' + h; }, function () { c.textContent = '@' + h; }); });
